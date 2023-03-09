@@ -10,6 +10,6 @@ namespace StrategyPattern.Core
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public bool IsEligibleForDiscount { get; set; }
+        public CustomerCategory Category { get; set; }
     }
 }
