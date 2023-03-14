@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPattern", "StrategyPattern\StrategyPattern.csproj", "{864EAF6D-0F2E-41A3-B995-38D957CA5654}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalesSystem", "StrategyPattern\SalesSystem.csproj", "{864EAF6D-0F2E-41A3-B995-38D957CA5654}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
