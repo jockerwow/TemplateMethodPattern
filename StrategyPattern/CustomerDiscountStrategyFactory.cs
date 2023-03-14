@@ -1,4 +1,5 @@
 ﻿using SalesSystem.Core;
+using SalesSystem.Core.DiscountStrategies;
 using StrategyPattern.Core.DiscountStrategies;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace SalesSystem
             else if (category == CustomerCategory.Gold)
                 return new GoldCustomerDiscountStrategy();
             else
-                return null;
+                return new NullDiscountStrategy();
         }
     }
 }
