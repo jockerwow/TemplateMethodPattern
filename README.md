@@ -1,6 +1,6 @@
 # SimpleFactoryPattern
 
-- Summary: Creational Design Pattern that enables the centralization of creation logic for different child implementations of an object (class/interface) in order to follow the Don't Repeat Yourself (DRY) principle. It also adheres to the Encapsulate-What-Varies principle by centralizing the code that is most likely to change.
+- Summary: Creational Design Pattern that enables the centralization of creation logic for different child implementations of an object (class/interface) in order to follow the Don't Repeat Yourself (DRY) principle. It also adheres to the Encapsulate-What-Varies principle by isolating the code that is most likely to change.
 
 - Logic: It depends on creating a factory class with a method that defines the initialization setup.
 - Result: This results in applying the required setup in a centralized and encapsulated location, instead of repeating it on multiple areas.
