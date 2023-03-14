@@ -1,4 +1,4 @@
-# SimpleFactoryPattern
+# NullObjectPattern
 
 - Summary: Behavioral Design Pattern that uses a null object to represent the absence of an actual object, to avoid the need for null checking and prevent NullPointerExceptions.
 
