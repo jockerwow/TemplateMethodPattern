@@ -10,6 +10,7 @@ namespace SalesSystem.Core
     {
         New,
         Silver,
-        Gold
+        Gold,
+        None
     }
 }

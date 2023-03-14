@@ -8,7 +8,11 @@ var dataReader = new CustomerDataReader();
 var customers = dataReader.GetCustomers();
 while (true)
 {
-    Console.WriteLine("Customer List: [1] Mohamed Nagieb [2] Wael Said");
+    Console.WriteLine("Customer List: ");
+    foreach (var customer in customers)
+        Console.WriteLine($"\t{customer.Id}. {customer.Name} ({customer.Category})");
+    Console.WriteLine();
+
     Console.Write($"Enter Customer ID: ");
     var customerId = int.Parse( Console.ReadLine() );
     Console.Write("Enter Item Quantity: ");
@@ -16,13 +20,13 @@ while (true)
     Console.Write("Enter Unit Price: ");
     var unitPrice = double.Parse( Console.ReadLine() );
 
-    var customer = customers.First(x => x.Id == customerId);
+    var selectedCustomer = customers.First(x => x.Id == customerId);
     var invoiceManager = new InvoiceManager();
 
-    ICustomerDiscountStrategy customerDiscountStrategy = new CustomerDiscountStrategyFactory().CreateCustomerDiscountStragey(customer.Category);
+    ICustomerDiscountStrategy customerDiscountStrategy = new CustomerDiscountStrategyFactory().CreateCustomerDiscountStragey(selectedCustomer.Category);
     invoiceManager.SetDiscountStrategy(customerDiscountStrategy);
-    var invoice = invoiceManager.CreateInvoice(customer, quantity, unitPrice);
-    Console.WriteLine($"Invoice created for customer `{customer.Name}` with net price: {invoice.NetPrice}");
+    var invoice = invoiceManager.CreateInvoice(selectedCustomer, quantity, unitPrice);
+    Console.WriteLine($"Invoice created for customer `{selectedCustomer.Name}` with net price: {invoice.NetPrice}");
     Console.WriteLine("Press any key to create another invoice");
     Console.ReadKey();
     Console.WriteLine("-------------------------------------");
