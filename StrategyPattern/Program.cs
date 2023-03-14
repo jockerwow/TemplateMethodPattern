@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using SalesSystem.Core;
 using StrategyPattern.Core;
 using StrategyPattern.Core.DiscountStrategies;
 
@@ -16,9 +17,9 @@ while (true)
 
     var customer = customers.First(x => x.Id == customerId);
     ICustomerDiscountStrategy customerDiscountStrategy = null;
-    if (customer.Category == StrategyPattern.CustomerCategory.Silver)
+    if (customer.Category == CustomerCategory.Silver)
         customerDiscountStrategy = new SilverCustomerDiscountStrategy();
-    else if (customer.Category == StrategyPattern.CustomerCategory.Gold)
+    else if (customer.Category == CustomerCategory.Gold)
         customerDiscountStrategy = new GoldCustomerDiscountStrategy();
     else
         customerDiscountStrategy = new NewCustomerDiscountStrategy();
