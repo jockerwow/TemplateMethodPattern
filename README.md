@@ -1,6 +1,6 @@
 # StrategyPattern
 
-- Summary: A Behavioral Design Pattern, used to reduce the complixity of different behaviors of the same object, instead of doing numerious if statements.
+- Summary: A Creational Design Pattern, used to follow the DRY priciple by centeralizing the initialization of different childs/implementations of the same object (class/interface).
 
 - Logic: It depends on creating an interface with the action method (A.K.A Context), and implementing a data structure of each required behavior
 - Result: This results in applying the required policies/strategies, while encapsulating each strategy logic on the relevant implementation data structure.
