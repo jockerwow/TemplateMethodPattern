@@ -1,9 +1,10 @@
 # SimpleFactoryPattern
 
-- Summary: Creational Design Pattern that enables the centralization of creation logic for different child implementations of an object (class/interface) in order to follow the Don't Repeat Yourself (DRY) principle. It also adheres to the Encapsulate-What-Varies principle by isolating the code that is most likely to change.
+- Summary: Behavioral Design Pattern that uses a null object to represent the absence of an actual object, to avoid the need for null checking and prevent NullPointerExceptions.
 
-- Logic: It depends on creating a factory class with a method that defines the initialization setup.
-- Result: This results in applying the required setup in a centralized and encapsulated location, instead of repeating it on multiple areas.
+- Logic: The Null Object Pattern involves creating a null object that conforms to the interface of the actual object it is replacing.
+
+- Result: This results in a more robust and flexible codebase, as it eliminates the need for null checks and allows for a consistent interface between actual and null objects.
 
 - The Project contains Two branches: 1- legacy: With legacy code to show the code without implementing the pattern 2- master: with the pattern applied.
 
