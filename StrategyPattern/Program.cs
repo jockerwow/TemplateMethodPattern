@@ -1,4 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using SalesSystem;
+using SalesSystem.Core;
 using StrategyPattern.Core;
 using StrategyPattern.Core.DiscountStrategies;
 
@@ -15,15 +17,9 @@ while (true)
     var unitPrice = double.Parse( Console.ReadLine() );
 
     var customer = customers.First(x => x.Id == customerId);
-    ICustomerDiscountStrategy customerDiscountStrategy = null;
-    if (customer.Category == StrategyPattern.CustomerCategory.Silver)
-        customerDiscountStrategy = new SilverCustomerDiscountStrategy();
-    else if (customer.Category == StrategyPattern.CustomerCategory.Gold)
-        customerDiscountStrategy = new GoldCustomerDiscountStrategy();
-    else
-        customerDiscountStrategy = new NewCustomerDiscountStrategy();
-
     var invoiceManager = new InvoiceManager();
+
+    ICustomerDiscountStrategy customerDiscountStrategy = new CustomerDiscountStrategyFactory().CreateCustomerDiscountStragey(customer.Category);
     invoiceManager.SetDiscountStrategy(customerDiscountStrategy);
     var invoice = invoiceManager.CreateInvoice(customer, quantity, unitPrice);
     Console.WriteLine($"Invoice created for customer `{customer.Name}` with net price: {invoice.NetPrice}");
