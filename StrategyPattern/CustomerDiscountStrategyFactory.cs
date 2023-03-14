@@ -17,7 +17,7 @@ namespace SalesSystem
             else if (category == CustomerCategory.Gold)
                 return new GoldCustomerDiscountStrategy();
             else
-                return new NewCustomerDiscountStrategy();
+                return null;
         }
     }
 }
