@@ -21,6 +21,11 @@ namespace StrategyPattern.Core
                     Id= 2,
                     Name="Wael Said",
                     Category = CustomerCategory.Silver,
+                },
+                new Customer(){
+                    Id= 3,
+                    Name="Lorn Voldmort",
+                    Category = CustomerCategory.None,
                 }
             };
         }

@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace SalesSystem.Core
 {
-    internal enum CustomerCategory
+    internal class Item
     {
-        New,
-        Silver,
-        Gold,
-        None
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public double UnitPrice { get; set; }
     }
 }
