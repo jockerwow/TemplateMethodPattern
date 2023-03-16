@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StrategyPattern.Core
+namespace SalesSystem.Core
 {
-    internal class InvoiceLine
+    internal class Item
     {
-        public int ItemId { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
         public double UnitPrice { get; set; }
-        public double Quantity { get; set; }
     }
 }
